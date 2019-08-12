@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+        
+        <script>
+            
+            (function(){
+
+                function calcularMedia(){
+                    console.log(arguments.length);
+                    var result = 0;
+                    var x = 0;
+                    //necessario colocar esse typeof pois se caso algum dos numeros dos parametros for 0 ele iria retornar false e sair no loop, nesse caso ele identifica 0 como numero e entra mesmo assim
+                    while(typeof arguments[x] === 'number'){
+                        result += arguments[x];
+                        x++;
+                    }
+                    result = result / (arguments.length);
+                    console.log('result: ', result);
+                }
+                
+                calcularMedia(10, 20);
+            })();
+            
+            
+        </script>
+        
+    </head>
+    <body>
+        <p>Criar um função que retorne a média de números passados por parametros. Essa função pode receber quantos numeros forem necessários.</p>
+        
+         
+        
+    </body>
+</html>

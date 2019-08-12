@@ -8,13 +8,14 @@
             
             //literal
             function somar(n1, n2) {
-                // corpor da funcao
+                // corpo da funcao
                 return n1 + n2;
             }
             
             var soma = somar(10, 20);
             console.log('Resultado: ', soma);
             
+            /// é possivel atribuir propriedades a funções, pois vc pode tratar uma função como um objeto
             somar.teste = 'propriedade da funcao';
             
             console.log(somar.teste);
@@ -47,15 +48,18 @@
             
             //IIFE - Immediately-invoked function expression
             (function(){
+                //use strict é uma boa pratica de usar nas funções, ele nao permite colocar codigos como criaçao da variavel global isValid = false; dará erro
                 'use strict';
                 var isValid = false;
                 console.log(isValid);
                 
                 function somar(){
+                    //a palavra arguments me mostra os itens que foram chamados como parametro, assim vc pode ter uma função com um numero nao fixo de parametros
                     console.log(arguments);
                     var result = 0;
                     var x = 0;
                     
+                    //esse while vai passar por todos os parametros existentes e somar um com o outro
                     while(arguments[x]){
                         //result = result + arguments[x];
                         result += arguments[x];
