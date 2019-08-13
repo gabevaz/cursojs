@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2018</h1>
+        
+        <input type="text" id="txtNome" value="digite">
+        <button onclick="escreve()">Só clica</button>
+        <div id="msg"></div>
+        
+        <script>
+            /*obs dessa aula
+                text content: quando tenho textos dentro de tags
+                inner html: quando tenho tags html dentro do elemento que estou buscando
+                value: infos que estao em elementos de formulario
+            */
+            
+            var txtNome2 = document.querySelector('#txtNome');
+
+            //é necessario a função pois ao digitar no input ele nao vai exibit a mensagem sozinho, precisa de uma ação para chama-lo
+            function escreve(){
+                var nome = txtNome2.value;                      
+                document.querySelector('#msg').innerHTML = "Bem-vindo, <b>" + nome + "</b>";
+            }
+            
+            
+        </script>
+        
+    </body>
+</html>
