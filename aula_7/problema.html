@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+        
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css" rel="stylesheet">
+        
+        <script src="beluga.js"></script>
+
+    </head>
+    <body>
+        <div class="container">
+            <h1>Curso Javascript Completo 2018</h1>
+        </div>
+        
+
+
+        <script>
+            
+            var pessoa1 = {
+                nome: 'Walter',
+                sobrenome: 'White'
+            };
+
+            var pessoa2 = {
+                nome: 'Jesse',
+                sobrenome: 'Pinkman'
+            };
+
+            var pessoa3 = {
+                nome: 'Gus',
+                sobrenome: 'Fring'
+            };
+
+            //para chamar os objetos é possivel chamar um por um, mas isso pode ficar um pouco repetitivo
+            console.log(pessoa1.nome + ' ' + pessoa1.sobrenome);
+            console.log(pessoa2.nome + ' ' + pessoa2.sobrenome);
+            console.log(pessoa3.nome + ' ' + pessoa3.sobrenome);
+
+            //portanto uma outra solução é fazer um for, e chamar os objetos pelo Objeto window
+            for(var i = 1; i <= 3; i++) {
+                console.log(window['pessoa'+i].nome + ' ' + window['pessoa'+i].sobrenome);
+            }
+
+            //outra forma de melhorar isso, colocar os objetos em um array
+            var pessoas = [
+                pessoa1,
+                pessoa2,
+                pessoa3
+            ]
+
+            //fazer um for para percorrer os itens
+            var x = 0;
+            while(pessoas[x]) {
+                console.log(pessoas[x].nome + ' ' + pessoas[x].sobrenome);
+                x++;
+            }
+                        
+        </script>
+        
+    </body>
+</html>

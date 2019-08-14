@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+        
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css" rel="stylesheet">
+        
+        <script src="beluga.js"></script>
+
+    </head>
+    <body>
+        <div class="container">
+            <h1>Curso Javascript Completo 2018</h1>
+        </div>
+        
+
+
+        <script>
+            
+           function Caneta(preco, cor) {
+               //para deixar os objetos mais seguros, usa propriedades privadas, que nao podem ser facilmente acessadas pelo console, no caso da cor
+               var color = cor || 'black';
+               this.preco = preco || 1;
+               //this.cor = cor || 'black';
+               this.mudarCor = function(cor) {
+                //validacao para nao mudar de cor em outras cores
+                if(cor !== 'red' || cor !== 'blue' || cor !== 'black') {
+                    return;
+                }   
+                color = cor;
+               }
+           }
+
+           //se criar assim vai vim com o padrao, ou seja 1 e black
+           var caneta1  = new Caneta();
+           //assim pode escolher os valores
+           var caneta2  = new Caneta(2, 'red');
+            
+            
+                        
+        </script>
+        
+    </body>
+</html>
